@@ -41,10 +41,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context,webView.class);
+//                intent.putExtra("url",modelClassArrayList.get(position).getUrl());
                 context.startActivity(intent);
             }
         });
-//        intent.putExtra("url",modelClassArrayList.get(position).getUrl());
+
         holder.mtime.setText("Published At:-"+modelClassArrayList.get(position).getPublishedAt());
         holder.mauthor.setText(modelClassArrayList.get(position).getAuthor());
         holder.mheading.setText(modelClassArrayList.get(position).getTitle());
